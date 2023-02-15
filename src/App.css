@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.align-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .App-logo {
@@ -27,6 +34,33 @@
 .App-link {
   color: #61dafb;
 }
+
+.card-container {
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px 0px;
+    justify-items: center;
+    width: 70%;
+}
+
+
+:root {
+  --skew-value: 6deg;
+  --card-width: 214px;
+  --card-height: 272px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.template {
+  display: none;
+}
+
+
+
 
 @keyframes App-logo-spin {
   from {
