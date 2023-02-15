@@ -2,8 +2,8 @@ import { StyledImg } from './styled'
 
 export type Props = {
   alt: string
-  src: string
   card?: boolean
+  src: string
 }
 
 export const Image = ({ alt, src, card }: Props) => {

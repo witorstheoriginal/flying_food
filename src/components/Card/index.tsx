@@ -2,25 +2,24 @@ import { Image } from '../Image'
 import { CardContent } from './CardContent'
 
 import {
-  CardContainer,
-  CardTintedShadows,
   CardBackground,
-  CardImageWrapper,
-  CardImageBackground,
-  CardImage,
-  CardImageBadge,
   CardButton,
-  CardButtonIcon
+  CardButtonIcon,
+  CardContainer,
+  CardImageBackground,
+  CardImageBadge,
+  CardImageWrapper,
+  CardTintedShadows
 } from './styled'
 
 export type Props = {
-  title: string
+  alt: string
+  isAvailable: boolean
   price: number
   rating: number
-  stars: number
-  isAvailable: boolean
-  alt: string
   src: string
+  stars: number
+  title: string
 }
 
 export const Card = ({ title, price, rating, stars, isAvailable, alt, src }: Props) => {

@@ -6,27 +6,26 @@ export type Props = {
 } & Partial<StyledTextProps>
 
 export const Text = ({
-  children,
-  variant = 'p',
   bold,
-  color = 'text',
-  size = 'md',
-  upperCase = false,
   capitalize = false,
   centered,
-  inline
+  children,
+  color = 'text',
+  inline,
+  size = 'md',
+  upperCase = false,
+  variant = 'p'
 }: Props) => {
-  console.log(upperCase, capitalize)
   return (
     <StyledText
       as={variant}
       bold={bold}
-      color={color}
-      size={size}
-      upperCase={upperCase}
       capitalize={capitalize}
       centered={centered}
+      color={color}
       inline={inline}
+      size={size}
+      upperCase={upperCase}
       variant={variant}
     >
       {children}

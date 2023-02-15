@@ -1,19 +1,19 @@
 import { Rating } from '../Rating'
 import {
-  CardTitle,
+  CardButtonIcon,
   CardData,
-  CardProductStatus,
-  CardProductRating,
   CardProductPrice,
-  CardButtonIcon
+  CardProductRating,
+  CardProductStatus,
+  CardTitle
 } from './styled'
 
 export type Props = {
-  title: string
   isAvailable: boolean
-  rating: number
   price: number
+  rating: number
   stars: number
+  title: string
 }
 
 export const CardContent = ({ title, isAvailable, rating, price }: Props) => {

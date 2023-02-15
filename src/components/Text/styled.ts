@@ -17,6 +17,7 @@ export type StyledTextProps = {
 
 export const StyledText = styled.p<StyledTextProps>`
   color: ${({ theme, color }) => theme.colors[color]};
+  display: ${({ inline }) => inline && 'inline-block'};
   font-size: ${({ theme, size, variant }) => {
     if (size) return theme.fontSizes[size] + UNIT
     const variantFontSize = theme.textVariants[variant].fontSize
@@ -27,10 +28,9 @@ export const StyledText = styled.p<StyledTextProps>`
 
     return theme.fontSizes[fontSize] + UNIT
   }};
-  line-height: ${({ theme, variant }) => theme.textVariants[variant].lineHeight}px;
   font-weight: ${({ bold }) => bold && 'bold'};
-  text-transform: ${({ upperCase }) => upperCase && 'uppercase'};
-  text-transform: ${({ capitalize }) => capitalize && 'capitalize'};
+  line-height: ${({ theme, variant }) => theme.textVariants[variant].lineHeight}px;
   text-align: ${({ centered }) => centered && 'center'};
-  display: ${({ inline }) => inline && 'inline-block'};
+  text-transform: ${({ capitalize }) => capitalize && 'capitalize'};
+  text-transform: ${({ upperCase }) => upperCase && 'uppercase'};
 `

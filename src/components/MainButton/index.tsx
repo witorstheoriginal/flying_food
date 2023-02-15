@@ -8,6 +8,10 @@ export type Props = {
   children: ReactNode
 }
 
-export const MainButton = ({ children, backgroundColor }: Props) => {
-  return <StyledButton backgroundColor={backgroundColor}>{children}</StyledButton>
+export const MainButton = ({ children, className, backgroundColor }: Props) => {
+  return (
+    <StyledButton backgroundColor={backgroundColor} className={className}>
+      {children}
+    </StyledButton>
+  )
 }

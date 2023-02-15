@@ -4,13 +4,13 @@ import { iconMap } from './config'
 
 export type IconName = keyof typeof iconMap
 
-export type Props = {
+export type IconProps = {
+  color: string
   name: IconName
   size?: SizeProp
-  color: string
 }
 
-export const Icon = ({ name, size, color }: Props) => {
+export const Icon = ({ name, size, color }: IconProps) => {
   return (
     <FontAwesomeIcon
       icon={iconMap[name]}

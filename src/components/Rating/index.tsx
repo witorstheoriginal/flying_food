@@ -1,9 +1,9 @@
 import { Icon } from '../Icon'
 
 export type Props = {
-  value: number
-  stars?: number
   color?: string
+  stars?: number
+  value: number
 }
 
 export const Rating = ({ value, stars = 5, color = '#E8C11C' }: Props) => {

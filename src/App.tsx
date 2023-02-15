@@ -4,6 +4,7 @@ import { Card } from './components/Card'
 import { Icon } from './components/Icon'
 import { Image } from './components/Image'
 import { MainButton } from './components/MainButton'
+import { IconButton } from './components/MainButton/IconButton'
 import { Text } from './components/Text'
 import { theme } from './style/theme'
 
@@ -34,11 +35,12 @@ function App() {
         />
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <Icon name={'fullStar'} color={'blue'} />
-          <MainButton backgroundColor="text">
+          <MainButton className="regularButton" backgroundColor="text">
             <Text color="secondary" variant="p">
               test
             </Text>
           </MainButton>
+          <IconButton backgroundColor={'secondary'} name="shoppingBag" color="white" />
         </div>
         <div style={{ width: 100, height: 100 }}>
           <Image
