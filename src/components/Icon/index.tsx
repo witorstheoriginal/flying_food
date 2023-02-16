@@ -10,7 +10,7 @@ export type IconProps = {
   size?: SizeProp
 }
 
-export const Icon = ({ name, size, color }: IconProps) => {
+export const Icon = ({ name, size = 'lg', color }: IconProps) => {
   return (
     <FontAwesomeIcon
       icon={iconMap[name]}

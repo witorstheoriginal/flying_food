@@ -1,22 +1,24 @@
 import styled from '@emotion/styled'
 import { Size, ThemeColor } from '../../style/theme'
 
-export type ButtonProps = {
-  backgroundColor: ThemeColor
-  size?: Size
+export type StyledBaseButtonProps = {
+  bgColor: ThemeColor
+  radius: number
+  size: Size
+  disabled?: boolean
+  bold?: boolean
+  outlined: boolean
+  squared?: boolean
 }
-export const StyledButton = styled.button<ButtonProps>`
-  background-color: ${({ theme, backgroundColor }) => theme.colors[backgroundColor]};
+
+export const StyledBaseButton = styled.button<StyledBaseButtonProps>`
+  background-color: ${({ theme, bgColor, outlined }) =>
+    outlined ? 'transparent' : theme.colors[bgColor]};
+  padding: ${({ theme, size }) =>
+    theme.sizes[size] / 2 + 'px ' + theme.sizes[size] + 'px'};
+  border-radius: ${({ theme, radius, squared }) =>
+    !squared && theme.radii[radius] + 'px'};
+  pointer-events: ${({ disabled }) => disabled && 'none'};
+  font-weight: ${({ bold }) => bold && 'bold'};
   max-width: fit-content;
-  border-radius: ${({ theme }) => theme.radii.at(3)}px;
-`
-export const StyledIconButton = styled(StyledButton)`
-  background: linear-gradient(#f9cf44, #eba636);
-  border: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  aspect-ratio: 1;
-  width: ${({ theme, size }) => theme.sizes[size || 'md']};
-  border-radius: ${({ theme }) => theme.radii.at(4)}%;
 `
