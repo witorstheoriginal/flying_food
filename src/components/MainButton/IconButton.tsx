@@ -1,23 +1,22 @@
 import { ThemeColor } from '../../style/theme'
 import { Icon, IconProps } from '../Icon'
-import { MainButton } from '.'
+import { StyledIconButton } from './styled'
 
-export type Props = {
-  backgroundColor: ThemeColor
+export type IconButtonProps = {
+  backgroundColor?: ThemeColor
   className?: string
 } & IconProps
 
-export const IconButton = ({ backgroundColor, name, size = '1x', color }: Props) => {
+export const IconButton = ({
+  backgroundColor = 'textInverse',
+  name,
+  size = '1x',
+  color,
+  className
+}: IconButtonProps) => {
   return (
-    <MainButton backgroundColor={backgroundColor}>
-      <div
-        style={{
-          width: '15px',
-          height: '15px'
-        }}
-      >
-        <Icon name={name} color={color} size={size} />
-      </div>
-    </MainButton>
+    <StyledIconButton backgroundColor={backgroundColor} className={className}>
+      <Icon name={name} color={color} size={size} />
+    </StyledIconButton>
   )
 }

@@ -1,6 +1,5 @@
 import { ThemeProvider } from '@emotion/react'
 import './App.css'
-import { Card } from './components/Card'
 import { Icon } from './components/Icon'
 import { Image } from './components/Image'
 import { MainButton } from './components/MainButton'
@@ -22,20 +21,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <Card
-          price={11.99}
-          isAvailable={true}
-          rating={4}
-          stars={4}
-          title="Burger King"
-          alt={'burger0'}
-          src={
-            'https://images.vexels.com/media/users/3/152411/isolated/preview/4a22d435331dde73ae0f1cebbdbaacff-double-burger-icon-by-vexels.png'
-          }
-        />
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <Icon name={'fullStar'} color={'blue'} />
-          <MainButton className="regularButton" backgroundColor="text">
+          <MainButton backgroundColor="text">
             <Text color="secondary" variant="p">
               test
             </Text>
