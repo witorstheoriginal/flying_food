@@ -7,9 +7,8 @@ interface ImageProps {
 export const StyledImg = styled.img.attrs((props: ImageProps) => ({
   card: props.card
 }))<ImageProps>`
-  height: 100px;
-  width: 100px;
-
+  width: 305px;
+  height: 377px;
   ${(props) =>
     props.card &&
     `position: absolute;

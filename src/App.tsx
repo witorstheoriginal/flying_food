@@ -1,8 +1,12 @@
+import React from 'react'
 import { ThemeProvider } from '@emotion/react'
 import './App.css'
+import { Card } from './components/Card'
 import { Icon } from './components/Icon'
 import { Image } from './components/Image'
 import { BaseButton } from './components/MainButton/BaseButton'
+import { Paper } from './components/Paper'
+import { QRScanner } from './components/QRScanner'
 import { Text } from './components/Text'
 import { theme } from './style/theme'
 
@@ -22,19 +26,18 @@ function App() {
       <div className="App">
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <Icon name={'fullStar'} color={'blue'} />
-          <BaseButton bgColor={'textInverse'} radius={3} size="sm" outlined={false}>
+          <BaseButton bgColor={'textInverse'} radius={3} size="lg" bold outlined={false}>
             <Text color="secondary" variant="p">
               test
             </Text>
           </BaseButton>
         </div>
-        <div style={{ width: 100, height: 100 }}>
-          <Image
-            alt={'image'}
-            src={'https://upload.wikimedia.org/wikipedia/en/8/88/Bugcat_Capoo.jpg'}
-          />
+        <Image
+          alt={'image'}
+          src={'https://tinypic.host/images/2023/02/16/Immagine.png'}
+        />
+          <Card />
         </div>
-      </div>
     </ThemeProvider>
   )
 }

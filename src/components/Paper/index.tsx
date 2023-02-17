@@ -1,11 +1,11 @@
-import { ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { ThemeColor } from '../../style/theme'
 import { StyledPaper } from './styled'
 
 export type Props = {
-  backgroundColor?: ThemeColor
   children: ReactNode
   className?: string
+  backgroundColor?: ThemeColor
   rounded?: boolean
   shadow?: boolean
 }

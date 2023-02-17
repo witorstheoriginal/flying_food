@@ -1,3 +1,4 @@
+import React from 'react'
 import { StyledImg } from './styled'
 
 export type Props = {

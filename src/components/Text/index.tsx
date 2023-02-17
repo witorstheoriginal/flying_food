@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { StyledText, StyledTextProps } from './styled'
 
 export type Props = {
